@@ -11,7 +11,7 @@ A service for capturing screenshots of websites using **Next.js**, **Redis**, an
 
 - 🗂️ Job queue management with Redis
 - 📸 Website screenshot capture using Puppeteer
-- ⚡ Real-time UI updates using **React Query**
+- ⚡ Real-time UI updates using React Query
 - 🛠️ Simple API to add URLs to the job queue
 - 🔄 Job processing in the backend using Next.js
 
