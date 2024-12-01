@@ -1,19 +1,22 @@
-import type { Metadata } from "next";
-import "./globals.css";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Website Screenshotter",
-  description: "Generate pictures of websites",
-};
+import "./globals.css";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { useState } from "react";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>): JSX.Element {
+  const [queryClient] = useState(() => new QueryClient());
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      </body>
     </html>
   );
 }

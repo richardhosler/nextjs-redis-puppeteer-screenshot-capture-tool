@@ -2,7 +2,7 @@ interface SiteSubmitterProps {
   queue: string[];
   url: string;
   setUrl: (value: string) => void;
-  handleRemoveFromQueue: (index: number) => Promise<void>;
+  handleRemoveFromQueue: (index: number) => void;
   handleAddToQueue: (event: React.FormEvent) => void;
 }
 
